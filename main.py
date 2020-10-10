@@ -104,14 +104,11 @@ if __name__ == "__main__":
     petal_length_std_dev = np.std(Petal_length_list)
     petal_width_std_dev = np.std(Petal_width_list)
 
-    print(sepal_length_std_dev)
-    print(sepal_width_std_dev)
-    print()
-    print(petal_length_std_dev)
-    print(petal_length_std_dev)
-
     table = PrettyTable()
-    column_names = ['Cecha','Minimum','Śr.arytm.(± odch.stand.)','Mediana(Q1 - Q3)','Maksimum']
-    table.add_column(column_names[0],["Długość działki kielicha (cm)", "Szerokość działki kielicha (cm)", "Długość płatka (cm)", "Szerokość płatka (cm)"])
-    table.add_column(column_names[1],[sepal_length_min, sepal_width_min, petal_length_min, petal_width_min])
+    column_names = ['Cecha', 'Minimum', 'Śr.arytm.(± odch.stand.)', 'Mediana(Q1 - Q3)', 'Maksimum']
+    table.add_column(column_names[0], ["Długość działki kielicha (cm)", "Szerokość działki kielicha (cm)",
+                                       "Długość płatka (cm)", "Szerokość płatka (cm)"])
+    table.add_column(column_names[1], [sepal_length_min, sepal_width_min, petal_length_min, petal_width_min])
+    table.add_column(column_names[2], [str(sepal_length_mean) + ' (±' + str(sepal_length_std_dev) + ')', str(sepal_width_mean) + ' (±' + str(sepal_width_std_dev) + ')',
+                                       str(petal_length_mean) + ' (±' + str(petal_length_std_dev) + ')', str(petal_width_mean) + ' (±' + str(petal_width_std_dev) + ')'])
     print(table)
