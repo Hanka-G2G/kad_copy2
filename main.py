@@ -35,7 +35,7 @@ if __name__ == "__main__":
     petal_length_max = round(max(Petal_length_list), 2)
     petal_width_max = round(max(Petal_width_list), 2)
 
-    # miary tendencji centralnej: średnia arytmetyczna, mediana
+    # miary tendencji centralnej: średnia arytmetyczna, mediana, obie funkcje z numpy
     sepal_length_mean = round(np.average(Sepal_length_list), 2)
     sepal_width_mean = round(np.average(Sepal_width_list), 2)
     petal_length_mean = round(np.average(Petal_length_list), 2)
@@ -92,5 +92,5 @@ if __name__ == "__main__":
                                          str(petal_width_median) + ' (' + str(petal_width_q1) + ' - ' + str(petal_width_q3) + ')'])
     table2.add_column(column_names2[4], [sepal_length_max, sepal_width_max, petal_length_max, petal_width_max])
 
-    print(table1.get_string(title="Tabela 1"))
-    print(table2.get_string(title="Tabela 2"))
+    print(table1.get_string(title="Tabela 1. Liczności gatunków irysów"))
+    print(table2.get_string(title="Tabela 2. Charakterystyka cech irysów"))
